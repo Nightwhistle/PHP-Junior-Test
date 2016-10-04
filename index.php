@@ -1,3 +1,6 @@
 <?php
 
-echo "wetf";
+
+require '/init/init.php';
+
+$db = model_Database::getInstance();
