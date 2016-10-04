@@ -1,19 +1,27 @@
 <?php
 
-class model_Database {
-    private $db = null;
+class Database {
+    /**
+     *
+     * @var PDO 
+     */
+    public $pdo;
+    private static $instance;
     
     private function __construct() {
-        $this->db = new PDO('mysql:host='.DB_HOST.'; dbname='.DB_DATABASE, DB_USERNAME, DB_PASSWORD);
-        $this->db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
-        $this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $this->pdo = new PDO('sqlite:'.SQLITE_PATH);
+        $this->pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
+        $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     }
-    
+    /**
+     * 
+     * @return Database
+     */
     public static function getInstance() {
-        if ($db === null) {
-            $db = new Database();
+        if (self::$instance === null) {
+            self::$instance = new Database();
         }
+        return self::$instance;
         echo "returning instance";
-        return $db;
     }
 }
