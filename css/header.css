@@ -1,0 +1,56 @@
+#header {
+    background: lightblue;
+    padding: 5px;
+}
+
+#logo {
+    vertical-align: middle;
+    display: inline-block;
+    background: gray;
+    width: 140px;
+    height: 70px;
+}
+
+#lang {
+    display: inline-block;
+    float: right;
+}
+
+.language {
+    display: inline-block;
+    color: green;
+    padding: 5px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.language:hover {
+    background: lightcoral;
+}
+
+
+nav {
+    text-align: right;
+}
+
+a {
+    padding: 5px;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+ul {
+    margin: 0; padding: 0;
+    display: inline-block;
+    position: relative;
+}
+
+li {
+    color: green;
+    display: inline-block;
+}
+
+a:hover {
+    color: red;
+    cursor: pointer;
+}

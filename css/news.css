@@ -1,0 +1,22 @@
+#newsContainer {
+    height: 330px;
+    width: 80%;
+    background: lightsalmon;
+    display: inline-block;
+    position: relative;
+}
+
+.news {
+    height: 130px;
+    background: lightcyan;
+    border: 1px solid gray;
+    padding: 5px;
+    margin: 5px;
+    overflow: scroll;
+}
+
+.pagination {
+    display: block;
+    text-align: right;
+    padding-right: 5px;
+}

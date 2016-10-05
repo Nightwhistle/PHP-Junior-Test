@@ -1,0 +1,15 @@
+div {
+    display:block;
+}
+
+body {
+    background: url(http://bgfons.com/upload/cardboard_texture999.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+#site-container {
+    background: gray;
+    padding: 5px;
+    margin: 0 auto;
+    width: 800px;
+}
