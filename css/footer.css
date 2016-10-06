@@ -1,4 +1,8 @@
 #footer {
-    height: 100px;
+    line-height: 30px;
     background: lightblue;
+    text-align: right;
+    vertical-align: middle;
+    color: gray;
+    padding-right: 5px;
 }

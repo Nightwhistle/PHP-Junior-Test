@@ -16,7 +16,8 @@
 }
 
 .pagination {
-    display: block;
+    position: absolute;
+    right: -5px; bottom: 5px;
     text-align: right;
     padding-right: 5px;
 }

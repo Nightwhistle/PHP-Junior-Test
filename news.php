@@ -26,10 +26,9 @@ and open the template in the editor.
             require '/init/init.php';
 
             include 'view/HeaderView.php';
-            include 'view/SliderView.php';
-            include 'view/NewsView.php';
-            include 'view/LikeLoginView.php';
 
+            include 'view/SingleNewsView.php';
+            
             include 'view/FooterView.php';
             ?>
         </div>
