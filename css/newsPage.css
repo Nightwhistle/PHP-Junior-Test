@@ -1,5 +1,5 @@
 #newsContainer {
-    height: 470px;
+    height: auto;
     width: 80%;
     background: lightsteelblue;
     display: inline-block;
@@ -7,13 +7,10 @@
 }
 
 .news {
-    height: 200px;
     background: lightgoldenrodyellow;
     border: 1px solid gray;
     padding: 5px;
     margin: 5px;
-    overflow: hidden;
-    text-overflow: ellipsis;
     text-align: justify;
 
 }
@@ -34,8 +31,7 @@
 }
 
 .news p {
-    height: 90px;
-    overflow: hidden;
+
 }
 
 .pagination {

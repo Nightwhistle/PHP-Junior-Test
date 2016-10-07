@@ -9,7 +9,10 @@ echo "<div id='newsContainer'>";
 
 foreach ($news as $singleNews) {
     echo "<div class='news'>";
+    echo "<div class='news-title'>";  
     echo "  <h2><a href='news.php?newsid=$singleNews->id'>$singleNews->news</a></h2>";
+    echo "  <span class='user'>$singleNews->username</span><span class='date'>$singleNews->date</span>";
+    echo "</div>";
     echo "  <p>$singleNews->title</p>";
     echo "</div>";
 }

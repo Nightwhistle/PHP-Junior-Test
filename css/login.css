@@ -1,6 +1,5 @@
 #LikeLogin {
     width: 20%;
-    height: 330px;
     float: right;
     display: inline-block;
     background: lightsteelblue;
@@ -8,8 +7,8 @@
 
 #Like {
     margin: 5px;
-    height: 50px;
-    background: white;
+    height: 267px;
+    background: url(http://lh6.ggpht.com/_nHEt80wjI5c/TE-8QGYCa7I/AAAAAAAABdo/SURy4evRj04/facebook%20like%20fan%20box%5B3%5D.jpg?imgmax=800);
     border: 1px solid gray;
 }
 

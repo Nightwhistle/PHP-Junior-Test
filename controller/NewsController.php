@@ -38,7 +38,7 @@ class NewsController {
         $this->last   = ceil($this->total / $limit);
         
         
-        $query = "SELECT * FROM news LIMIT :limit OFFSET :offset";
+        $query = "SELECT news.*, users.username FROM news JOIN users ON (news.user = users.id) LIMIT :limit OFFSET :offset";
         $statement = $this->db->pdo->prepare($query);
         $statement->bindParam("limit", $this->limit);
         $statement->bindParam("offset", $this->offset);
@@ -48,13 +48,13 @@ class NewsController {
     }
     
     public function getSingleNews($id) {
-        $query = "SELECT * FROM news WHERE id = :id";
+        $query = "SELECT news.*, users.username FROM news JOIN users ON (news.user = users.id) WHERE (news.id = :id)";
+        $id = (int)$id;
         $statement = $this->db->pdo->prepare($query);
         $statement->bindParam(':id', $id);
-        $result = $statement->fetch();
-        var_dump($result);
+        $statement->execute();
+        $result = $statement->fetch(PDO::FETCH_OBJ);
         return $result;
-        
     }
     
     public function getPagination() {

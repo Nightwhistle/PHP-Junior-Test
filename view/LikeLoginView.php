@@ -1,5 +1,5 @@
 <div id="LikeLogin">
-    <div id="Like">Lajk batn</div> 
+    <div id="Like"></div> 
     <div id="Login">
         <form>
             <label>Username: </label><input id="username" type="text"><br>

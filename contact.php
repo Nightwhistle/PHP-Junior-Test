@@ -18,6 +18,7 @@ and open the template in the editor.
         <link rel="stylesheet" type="text/css" href="css/login.css">
 
         <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
     </head>
     <body>
         <div id="site-container">
@@ -27,8 +28,7 @@ and open the template in the editor.
 
             include 'view/HeaderView.php';
 
-
-            
+            echo "<iframe width='800px' height='500px' frameborder='0' scrolling='no' marginheight='0' marginwidth='0' src='https://maps.google.com/maps?q=NoviSad&amp;ie=UTF8&amp;&amp;output=embed'></iframe><br />";
             include 'view/FooterView.php';
             ?>
         </div>

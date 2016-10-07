@@ -14,8 +14,10 @@ and open the template in the editor.
         <link rel="stylesheet" type="text/css" href="css/header.css">
         <link rel="stylesheet" type="text/css" href="css/footer.css">
         <link rel="stylesheet" type="text/css" href="css/slider.css">
-        <link rel="stylesheet" type="text/css" href="css/news.css">
+        <link rel="stylesheet" type="text/css" href="css/newsPage.css">
         <link rel="stylesheet" type="text/css" href="css/login.css">
+        
+        <style>#news p {height: auto}</style>
 
         <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
     </head>
@@ -28,7 +30,7 @@ and open the template in the editor.
             include 'view/HeaderView.php';
 
             include 'view/SingleNewsView.php';
-            
+            include 'view/LikeLoginView.php';
             include 'view/FooterView.php';
             ?>
         </div>
