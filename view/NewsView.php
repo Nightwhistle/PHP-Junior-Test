@@ -12,7 +12,7 @@ foreach ($news as $singleNews) {
     echo "  <h2><a href='news.php?newsid=$singleNews->id'>$singleNews->title</a></h2>";
     echo "  <span class='user'>$singleNews->username</span><span class='date'>$singleNews->date</span>";
     echo "</div>";
-    echo "  <p>$singleNews->news</p>";
+    echo $singleNews->news;
     echo "</div>";
 }
 

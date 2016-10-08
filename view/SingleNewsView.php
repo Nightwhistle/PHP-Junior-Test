@@ -7,6 +7,7 @@ $news;
 if ($id != 'nonselected') {
     $news = $newsController->getSingleNews($id);
 }
+
 echo "<div id='newsContainer'>";
 
 echo "<div class='news'>";

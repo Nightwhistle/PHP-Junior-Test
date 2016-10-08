@@ -21,16 +21,18 @@
 .news h2 {
     display: inline-block;
     margin: 0;
+    width: 380px;
 }
 
 .news .user {
-    width: 50px;
+    width: 70px;
     float: right;
+    text-align: right;
 }
 
 .news .date {
     float: right;
-    width: 100px;
+    width: 150px;
 }
 
 .news p {
