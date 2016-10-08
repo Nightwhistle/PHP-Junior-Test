@@ -5,6 +5,7 @@
             <label>Username: </label><input id="username" type="text"><br>
             <label>Password: </label><input id="password" type="password"><br>
             <input id="submit" type="submit">
+            <a href="Register.php">Register</a>
         </form>
     </div>
 </div>

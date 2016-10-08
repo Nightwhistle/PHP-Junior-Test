@@ -10,8 +10,8 @@ if ($id != 'nonselected') {
 echo "<div id='newsContainer'>";
 
 echo "<div class='news'>";
-echo "  <h2>$news->news</h2>";
-echo "  <p>$news->title</p>";
+echo "  <h2>$news->title</h2>";
+echo "  <p>$news->news</p>";
 echo "  <p>$news->username</p>";
 echo "</div>";
 

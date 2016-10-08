@@ -38,17 +38,18 @@ class NewsController {
         $this->last   = ceil($this->total / $limit);
         
         
-        $query = "SELECT news.*, users.username FROM news JOIN users ON (news.user = users.id) LIMIT :limit OFFSET :offset";
+        $query = "SELECT news.*, users.username FROM news JOIN users ON (news.userid = users.id) LIMIT :limit OFFSET :offset";
         $statement = $this->db->pdo->prepare($query);
         $statement->bindParam("limit", $this->limit);
         $statement->bindParam("offset", $this->offset);
         $statement->execute();
         $result = $statement->fetchAll(PDO::FETCH_OBJ);
+        
         return $result;
     }
     
     public function getSingleNews($id) {
-        $query = "SELECT news.*, users.username FROM news JOIN users ON (news.user = users.id) WHERE (news.id = :id)";
+        $query = "SELECT news.*, users.username FROM news JOIN users ON (news.userid = users.id) WHERE (news.id = :id)";
         $id = (int)$id;
         $statement = $this->db->pdo->prepare($query);
         $statement->bindParam(':id', $id);
