@@ -39,8 +39,27 @@ class UserController {
         return false;
     }
     
+    /**Logging in user passed to function
+     * Returns true if logged successfuly
+     * Assigning Session values for logged in user
+     * 
+     * @param User $user
+     * @return boolean
+     */
     public function login(User $user) {
+        $query = "SELECT id, username, password FROM users WHERE username = :username LIMIT 1";
+        $statement = $this->pdo->prepare($query);
+        $statement->bindParam(':username', $user->getUsername());
+        $statement->execute();
+        $result = $statement->fetch(PDO::FETCH_OBJ);
         
+        // If nothing is returned, no such user exists
+        if (!$result) return false;
+        
+        // Checking password against database hash, logs in user if its true
+        if (password_verify($user->getPassword(), $result->password)) {
+            return true;
+        } 
     }
     
     public function isLoggedIn(User $user) {

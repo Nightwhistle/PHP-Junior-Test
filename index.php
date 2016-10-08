@@ -31,6 +31,21 @@ and open the template in the editor.
             include 'view/LikeLoginView.php';
 
             include 'view/FooterView.php';
+            
+            // Login handling -------------
+            // Get POST values for register
+            $username = isset($_POST['username']) ? $_POST['username'] : null;
+            $password = isset($_POST['password']) ? $_POST['password'] : null;
+            // If nothing is sent, exit script
+            if (is_null($username) || is_null($password)) exit();
+            
+            $user = new User();
+            $user->setUsername($username);
+            $user->setPassword($password);
+
+            $userController = new UserController($user);
+            if ($userController->login($user)) echo "logged in!";
+            else echo "Something exploded!";
             ?>
         </div>
         <script src="js/jquery.sldr.js"></script>
